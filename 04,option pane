@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication2;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Usuario
+ */
+public class JavaApplication2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double soma= 1+3+5+7+9;
+        double multi= 2*4*6*8*10;
+        String crescente="1,2,3,4,5,6,7,8,9,10";
+        String decrescente="10,9,8,7,6,5,4,3,2,1";
+        
+       
+       Object[] options = { "soma dos  impares de 1 a 10", "multiplicação de pares de 1 a 10","Numeros de 1 a 10 em ordem crescente ","Numeros de 1 a 10 em ordem decrescente"};
+       
+     
+    int op= JOptionPane.showOptionDialog(null, "Opções   :" ,"Escolha",
+          JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+              null, options, options[0]);
+        switch (op) {
+            case 0:
+                JOptionPane.showMessageDialog(null,"A soma dos numeros impares de 0 a 10 é : " + soma);
+                break;
+            case 1:
+                JOptionPane.showMessageDialog(null,"A multiplicação dos pares de 1 a 10 é: " + multi);
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null,crescente);
+                break;
+            case 3:
+                JOptionPane.showMessageDialog(null,decrescente);
+                break;
+            default:
+                break;
+        }
+    
+    
+    }
+}
+
+    
+
